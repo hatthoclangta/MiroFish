@@ -1,45 +1,156 @@
-# Project Overview
+# 📋 MiroFish Project Overview
 
-## Core Purpose
-The purpose of MiroFish is to provide an efficient and user-friendly platform for managing and visualizing data related to marine life and ecosystems. The platform aims to facilitate research, education, and conservation efforts by providing tools for data analysis and visualization.
+## 🎯 Core Purpose
 
-## Vision
-MiroFish envisions a world where data-driven insights lead to better understanding and protection of marine ecosystems. Through our platform, we aim to empower researchers, educational institutions, and conservation organizations with the tools they need to make informed decisions.
+MiroFish is an innovative **AI-powered swarm intelligence engine** designed to predict and simulate complex scenarios by creating digital simulations of reality. It's a sophisticated system that combines multi-agent technology with advanced AI to enable predictive modeling across various domains.
 
-## Technology Stack
-- **Frontend**: React.js, Redux, CSS, HTML
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Deployment**: Docker, AWS
-- **Version Control**: Git, GitHub
+MiroFish extracts seed information from the real world (breaking news, policy drafts, financial signals) and automatically constructs a **high-fidelity parallel digital world**. Within this simulation space:
+- Thousands of AI agents with independent personalities, long-term memory, and behavioral logic interact freely
+- Social evolution dynamics unfold autonomously
+- Users can inject variables dynamically to precisely predict future outcomes
 
-## Project Structure
+**The concept**: Upload seed materials (data reports or interesting stories) + describe prediction needs in natural language → Receive detailed prediction reports + interactive 3D digital world
+
+---
+
+## 🔬 Vision & Use Cases
+
+### Macro Level (Decision Making)
+- **Decision-maker's simulation lab** for policy and PR testing in a zero-risk environment
+- Policy scenario planning and outcome forecasting
+
+### Micro Level (Creative Exploration)
+- **Personal creative sandbox** for exploring stories and scenarios
+- Scenario exploration and "what-if" analysis
+- Entertainment and interactive storytelling
+
+---
+
+## 🛠️ Technology Stack
+
+| Component | Language | Composition |
+|-----------|----------|------------|
+| **Backend** | Python | 57.8% |
+| **Frontend** | Vue.js | 41.1% |
+| **Other** | - | 1.1% |
+
+### Backend Architecture
+- **Python 3.11-3.12** runtime
+- **FastAPI** or similar REST API framework
+- Uses `pyproject.toml` for dependency management
+- Entry point: `backend/run.py`
+- Dependencies managed via `uv` package manager
+
+### Frontend Architecture  
+- **Vue.js** with Vite bundler
+- Modern SPA (Single Page Application)
+- Node.js 18+ environment
+- Build configuration via `vite.config.js`
+
+---
+
+## 📁 Project Structure
+
 ```
 MiroFish/
-├── client/            # Frontend code
-│   ├── src/          # React components
-│   ├── public/       # Static files
-│   └── package.json   # Frontend dependencies
-├── server/            # Backend code
-│   ├── models/       # Database models
-│   ├── routes/       # API routes
-│   └── package.json   # Backend dependencies
-└── README.md          # Project documentation
+├── backend/
+│   ├── app/                 # Main application logic
+│   ├── scripts/             # Utility scripts
+│   ├── run.py              # Backend entry point
+│   ├── pyproject.toml      # Python project configuration
+│   ├── requirements.txt    # Python dependencies
+│   └── uv.lock             # Dependency lock file
+├── frontend/
+│   ├── src/                # Vue components and source code
+│   ├── public/             # Static assets
+│   ├── index.html          # Main HTML file
+│   ├── vite.config.js      # Vite configuration
+│   ├── package.json        # Node dependencies
+│   └── package-lock.json   # Dependency lock file
+├── Dockerfile              # Container build config
+├── docker-compose.yml      # Multi-container orchestration
+├── .env.example            # Environment configuration template
+└── README.md              # Project documentation
 ```
 
-## Workflow
-1. **Development**: Developers work on separate branches and use pull requests to integrate changes.
-2. **Testing**: Each pull request triggers automated tests to ensure code quality.
-3. **Deployment**: Successfully merged branches are deployed to the production environment.
+---
 
-## Deployment Instructions
-1. Clone the repository: `git clone https://github.com/hatthoclangta/MiroFish.git`
-2. Navigate to the server directory: `cd MiroFish/server`
-3. Install dependencies: `npm install`
-4. Start the server: `node index.js`
-5. Navigate to the client directory: `cd ../client`
-6. Install dependencies: `npm install`
-7. Start the client: `npm start`
+## 🔄 Core Workflow
 
-## Background Information
-MiroFish is developed in response to the growing need for effective marine data management tools. With the increasing pressures on marine ecosystems, there's a critical need for easy access to data and insights that can drive better policies and conservation strategies. We believe that MiroFish will contribute significantly to this goal by bringing state-of-the-art tools to a diverse user base.
+1. **Graph Construction**: Extract reality seeds & inject memory + GraphRAG building
+2. **Environment Setup**: Entity-relationship extraction, character generation, simulation parameters
+3. **Simulation Start**: Parallel dual-platform simulation, auto-parse prediction needs, dynamic memory updates
+4. **Report Generation**: ReportAgent uses rich tool sets to interact with simulated environment
+5. **Deep Interaction**: Converse with simulated agents or ReportAgent for deeper analysis
+
+---
+
+## 🚀 Deployment & Setup
+
+### Prerequisites
+- **Node.js** 18+
+- **Python** 3.11-3.12
+- **uv** package manager
+
+### Quick Start
+```bash
+# Configuration
+cp .env.example .env
+
+# Install dependencies
+npm run setup:all
+
+# Start services
+npm run dev
+
+# Services run on:
+# - Frontend: http://localhost:3000
+# - Backend API: http://localhost:5001
+```
+
+### Docker Deployment
+```bash
+cp .env.example .env
+docker compose up -d
+```
+
+---
+
+## 📊 Key Configuration
+
+**Required Environment Variables:**
+- `LLM_API_KEY` - Large language model API key
+- `LLM_BASE_URL` - LLM endpoint (recommends Alibaba Bailian/Qwen-plus)
+- `LLM_MODEL_NAME` - Model specification
+- `ZEP_API_KEY` - Zep Cloud for memory management
+
+---
+
+## 🏢 Project Background
+
+- **Status**: Fork of original repository (666ghj/MiroFish)
+- **License**: GNU Affero General Public License v3.0 (AGPL-3.0)
+- **Backing**: Shanda Group support & incubation
+- **Engine**: Powered by **OASIS** (by CAMEL-AI team)
+- **Network reach**: 1782+ forks on GitHub
+- **Official site**: https://mirofish.ai
+
+---
+
+## 🎓 Demo Applications
+
+1. **Wuhan University Opinion Simulation** - Predicting public opinion dynamics
+2. **Dream of the Red Chamber** - Predicting lost story chapters using existing 80-chapter novel content
+3. (Financial & Political predictions coming soon)
+
+---
+
+## 👥 Community & Involvement
+
+- **Active Communication**: Discord, Twitter/X, Instagram
+- **Hiring**: Open roles for full-time/internship positions interested in multi-agent AI
+- Contact: mirofish@shanda.com
+
+---
+
+This is a cutting-edge project that bridges AI simulation with real-world prediction needs, combining swarm intelligence concepts with modern LLMs for interactive scenario modeling!
